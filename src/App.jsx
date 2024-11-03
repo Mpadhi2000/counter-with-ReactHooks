@@ -2,26 +2,24 @@ import { useState } from 'react';
 import './App.css'
 
 function App() {
-let [counter, setCounter] = useState(15);
-let addValue_btn1 = document.querySelector('.btn1');
-let removeValue_btn2 = document.querySelector('.btn2');
+  let [counter, setCounter] = useState(15);
+
   const addValue = () => {
-    counter += 1;
-    setCounter(counter);
-    if(counter == 20){
-      addValue_btn1.disabled = true;
-    } else {
-      addValue_btn1.disabled = false;
-    }
+    setCounter(prevCounter => {
+      if (prevCounter < 20) {
+        return prevCounter + 1;
+      }
+      return prevCounter;
+    });
   }
 
   const removeValue = () => {
-    setCounter(counter -= 1);
-    if(counter == 0) {
-      removeValue_btn2.disabled = true;
-    } else {
-      removeValue_btn2.disabled = false;
-    }
+    setCounter(prevCounter => {
+      if (prevCounter > 0) {
+        return prevCounter - 1;
+      }
+      return prevCounter;
+    });
   }
 
   return (
