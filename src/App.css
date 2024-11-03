@@ -1,0 +1,36 @@
+h1,h2 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.counter-wrapper {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-container p {
+    text-align: center;
+    font-size: 29px;
+    margin: 20px 0px;
+    color: #fff;
+}
+
+.counter-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn1,.btn2 {
+    background: #04AA6D;
+    color: #fff;
+    border: none;
+    width: 140px;
+    height: 49px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: none;
+}
