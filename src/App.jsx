@@ -3,13 +3,25 @@ import './App.css'
 
 function App() {
 let [counter, setCounter] = useState(15);
-
+let addValue_btn1 = document.querySelector('.btn1');
+let removeValue_btn2 = document.querySelector('.btn2');
   const addValue = () => {
-    setCounter(counter += 1);
+    counter += 1;
+    setCounter(counter);
+    if(counter == 20){
+      addValue_btn1.disabled = true;
+    } else {
+      addValue_btn1.disabled = false;
+    }
   }
 
   const removeValue = () => {
     setCounter(counter -= 1);
+    if(counter == 0) {
+      removeValue_btn2.disabled = true;
+    } else {
+      removeValue_btn2.disabled = false;
+    }
   }
 
   return (
